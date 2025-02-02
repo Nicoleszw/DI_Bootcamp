@@ -61,4 +61,4 @@ height = int(input("What is your height?"))
 if height > 145 :
  print("You are tall enough to ride!!")
 else  :
- print ("Sorry, you would need to grow some more to ride:(")
+ print ("Sorry, you would need to grow some more to ride")
