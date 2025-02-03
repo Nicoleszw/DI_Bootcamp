@@ -1,0 +1,6 @@
+Define the following value types:
+
+Strings: Text wrapped with doble or simple quotation marks. 
+Integers: whole numbers 
+Floats: numbers with decimals 
+Booleans: True and false 
