@@ -1,0 +1,23 @@
+Data Stacture (more complex) - Dictionaries
+
+What is:
+- an entry = key value pair {key:value}
+
+How to:
+- create (syntax) = {key:value}
+- access key = dict_name["key"]
+- modify an entry = dict_name[key] = new_value 
+- add new entry = dict_name[new_key] = new_value 
+- delete an entry = use ¨del¨keyword
+- access all the keys = dict_name.keys()
+- access all the values = dict_name.value()
+- access all keys and values = dict_name.items()
+- method to add one or multiple key values pair = .update()
+
+#Advanced built-in method and keywords:
+
+zip() = most be converted to an interable in order to see the results
+
+Continue : jump to the next interaction
+Break: breakes the loop
+Pass : placeholder - does nothing, organize the code 
