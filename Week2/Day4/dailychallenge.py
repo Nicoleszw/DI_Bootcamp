@@ -41,7 +41,7 @@ if __name__ == "__main__":
     print("Unique words:", text_instance.unique_words())
     
 
-file_text_instance = Text.from_file('the_stranger.txt')
+file_text_instance = Text.from_file("Day4/the_stranger.txt") 
 if file_text_instance:
     print("Most common word in file:", file_text_instance.most_common_word())
     print("Unique words in file:", file_text_instance.unique_words())
