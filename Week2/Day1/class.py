@@ -1,3 +1,23 @@
+# CLASS
+
+class PlayerCharacter:
+    #Class Object Attribute
+    membership = True
+    def __init__(self, name, age):
+        if (PlayerCharacter.membership):
+         self.name = name #attributes
+         self.age = age
+    
+    def shout(self):
+        print(f"my name is {self.name}")
+
+player1 = PlayerCharacter("Cindy", 44)
+player2 = PlayerCharacter("Tom", 21)
+
+print(player1.shout())
+print(player2.shout())
+
+
 # Goal: Create a Book class where each book has a title, author, and year.
 
 class Book:
