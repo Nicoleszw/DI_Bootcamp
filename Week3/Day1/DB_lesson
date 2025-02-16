@@ -1,0 +1,34 @@
+Database: stucture data storage 
+
+SQL: Stractured Query Language (pronunced also as Siquel)
+
+PostgreSQL RDBM (Relational Database Managment System)
+
+Pgadmin: GUI (Graphical Interface) to work with PostgreSQL
+
+Relational DB: the tables have a relationship (parent tables and child tables)
+
+Terminology for a table in Database
+
+How the data on a relational db?
+- TABLES
+1. fields: the fist row of the table - which holds the headings of each column.
+2. a record or a row: horizontal: individual entry on a table.
+3. column: vertical data associated with specific field. 
+
+- NULL value: absence of a value when adding the data 
+
+DATA TYPES ON DB
+- varchar: short tring
+- text: text field (strings)
+- integers
+- decimal
+- smallint
+- data time
+- boolean
+
+CONSTRAINTS: conditions on the field
+- NOT NULL: has to be valid data 
+- DEFAULT: sets a default value
+- UNIQUE: don´t accept repeated data 
+- PRIMARY KEY:  not null + unique, usually is used to create a serial number that identifies the row
