@@ -32,5 +32,10 @@
 --SELECT first_name FROM actors WHERE first_name = 'Matt'
 
 
+--SELECT COUNT(*) FROM actors 
 
+--INSERT INTO actors (first_name, last_name, age, number_oscars)
+--VALUES ('Meryl', ' ', '06/22/1949', 2)
+
+SELECT * FROM actors 
  
