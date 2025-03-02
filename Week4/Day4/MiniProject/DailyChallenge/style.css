@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff5757, #ff7b7b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.listTasks {
+    width: 100%;
+    text-align: left;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task .deleteBtn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task .taskText {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.task.completed .taskText {
+    text-decoration: line-through;
+    color: red;
+}
+
+#clearBtn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    margin-top: 10px;
+}
