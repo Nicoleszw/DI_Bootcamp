@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: blueviolet;
+            padding: 10px 20px;
+            color: aliceblue;
+        }
+
+        .user-profile{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>My Website</h2>
+        <div id="user-container"></div>
+    </div>
+    <script src="exercise7.js"></script>
+</body>
+</html>
