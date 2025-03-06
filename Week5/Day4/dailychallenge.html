@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to JSON</title>
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="lastname" placeholder="Enter Last Name">
+    <button onclick="submitForm()">Send</button>
+
+    <p id="output"></p>
+
+    <script>
+        function submitForm() {
+            let name = document.getElementById("name").value;
+            let lastname = document.getElementById("lastname").value;
+
+            let jsonData = {
+                name: name,
+                lastname: lastname
+            };
+
+            document.getElementById("output").textContent = JSON.stringify(jsonData);
+        }
+    </script>
+
+</body>
+</html>
