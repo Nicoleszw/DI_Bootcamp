@@ -1,0 +1,71 @@
+body {
+    background-color: #3a0ca3;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: #48cae4;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'SEGA LOGO FONT', sans-serif; 
+}
+
+#title {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+#searchBox {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: 
+        #90e0ef url('backgound2.png'); 
+    background-size: cover; 
+    background-blend-mode: overlay; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #333;
+}
