@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emoji Guessing Game</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 20px; }
+    .option { margin: 10px; padding: 10px; cursor: pointer; }
+    #leaderboard { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Emoji Guessing Game</h1>
+  <h2 id="emoji">Loading...</h2>
+  <div id="options"></div>
+  <form id="guessForm" style="display:none;">
+    <input type="hidden" name="guess" id="guessInput" />
+    <input type="text" id="playerName" placeholder="Your Name" required />
+    <button type="submit">Submit Guess</button>
+  </form>
+  <p id="feedback"></p>
+  <h3>Score: <span id="score">0</span></h3>
+
+  <div id="leaderboard">
+    <h3>Leaderboard</h3>
+    <ul id="leaderList"></ul>
+  </div>
+
+  <script>
+    const emojiElem = document.getElementById('emoji');
+    const optionsElem = document.getElementById('options');
+    const guessForm = document.getElementById('guessForm');
+    const guessInput = document.getElementById('guessInput');
+    const feedback = document.getElementById('feedback');
+    const scoreElem = document.getElementById('score');
+    const leaderList = document.getElementById('leaderList');
+
+    let currentOptions = [];
+
+    function loadQuestion() {
+      fetch('/api/question')
+        .then(res => res.json())
+        .then(data => {
+          emojiElem.textContent = data.emoji;
+          optionsElem.innerHTML = '';
+          data.options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.textContent = option;
+            btn.className = 'option';
+            btn.onclick = () => selectGuess(option);
+            optionsElem.appendChild(btn);
+          });
+          guessForm.style.display = 'block';
+        });
+    }
+
+    function selectGuess(option) {
+      guessInput.value = option;
+    }
+
+    guessForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const guess = guessInput.value;
+      const player = document.getElementById('playerName').value.trim();
+      if (!guess || !player) return;
+
+      fetch('/api/guess', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ guess, player })
+      })
+      .then(res => res.json())
+      .then(data => {
+        feedback.textContent = data.isCorrect 
+          ? "Correct!" 
+          : `Wrong! The correct answer was ${data.correctAnswer}.`;
+        scoreElem.textContent = data.score;
+
+        leaderList.innerHTML = '';
+        data.leaderboard.forEach(entry => {
+          const li = document.createElement('li');
+          li.textContent = `${entry.player}: ${entry.score}`;
+          leaderList.appendChild(li);
+        });
+
+        guessInput.value = '';
+        loadQuestion();
+      });
+    });
+
+    loadQuestion();
+  </script>
+</body>
+</html>
