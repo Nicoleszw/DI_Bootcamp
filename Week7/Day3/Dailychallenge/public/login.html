@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+  <h1>Login :</h1>
+  <form id="loginForm">
+    Username <input type="text" id="username" required><br>
+    Password <input type="password" id="password" required><br>
+    <button type="submit" id="submitBtn" disabled>Login</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const inputs = form.querySelectorAll('input');
+    const message = document.getElementById('message');
+
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        const filled = [...inputs].every(i => i.value.trim() !== '');
+        submitBtn.disabled = !filled;
+      });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        username: form.username.value,
+        password: form.password.value
+      };
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      message.textContent = result.message;
+    });
+  </script>
+</body>
+</html>
