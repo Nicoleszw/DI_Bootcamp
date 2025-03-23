@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars Characters</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body {
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'), black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #star-wars-logo {
+      font-size: 60px;
+      color: yellow;
+      margin-top: 30px;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    #character-box {
+      border: 3px solid yellow;
+      border-radius: 15px;
+      margin: 30px auto;
+      padding: 20px;
+      width: 400px;
+      min-height: 150px;
+    }
+
+    #fetch-btn {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: 2px solid yellow;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+
+    #fetch-btn:hover {
+      background-color: yellow;
+    }
+
+    .spinner {
+      font-size: 30px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="star-wars-logo">STAR WARS</div>
+
+  <div id="character-box">
+    <p>Click the button to find a Star Wars character!</p>
+  </div>
+
+  <button id="fetch-btn">Find Someone</button>
+
+  <script src="miniproject.js"></script>
+</body>
+</html>
