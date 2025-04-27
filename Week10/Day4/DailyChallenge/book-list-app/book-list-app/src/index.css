@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-book {
+  margin-bottom: 2rem;
+}
+
+input {
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+}
+
+.list li {
+  margin: 0.5rem 0;
+}
