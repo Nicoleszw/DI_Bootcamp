@@ -1,0 +1,17 @@
+.recipe-app {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.recipe-card .favorite {
+  color: tomato;
+}
